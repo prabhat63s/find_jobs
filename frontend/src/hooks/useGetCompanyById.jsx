@@ -10,7 +10,7 @@ const useGetCompanyById = (id) => {
       try {
         axios.defaults.withCredentials = true;
         const res = await axios.get(
-          `http://localhost:8000/api/v1/company/getcompany/${id}`
+          `https://find-jobs.onrender.com/api/v1/company/getcompany/${id}`
         );
         if (res.data.success) {
           dispatch(setSingleCompany(res.data.company));
